@@ -1,0 +1,16 @@
+
+services:
+  - type: web
+    name: facebook-telegram-stream
+    runtime: python
+    buildCommand: |
+      apt-get update
+      apt-get install -y ffmpeg tmux
+      pip install -r requirements.txt
+    startCommand: python web_app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: PORT
+        value: 5000
+    plan: free
