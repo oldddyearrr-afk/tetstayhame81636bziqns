@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📺 مركز التحكم في البث المباشر</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .platforms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .platform-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .platform-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .platform-name {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .platform-desc {
+            color: #6b7280;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+
+        .platform-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .facebook-card {
+            border-top: 5px solid #4267B2;
+        }
+
+        .facebook-btn {
+            background: linear-gradient(135deg, #4267B2 0%, #385898 100%);
+        }
+
+        .telegram-card {
+            border-top: 5px solid #0088cc;
+        }
+
+        .telegram-btn {
+            background: linear-gradient(135deg, #0088cc 0%, #005f8c 100%);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .platforms {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📺 مركز التحكم في البث المباشر</h1>
+            <p>اختر المنصة التي تريد البث إليها</p>
+        </div>
+
+        <div class="platforms">
+            <a href="/facebook" class="platform-card facebook-card">
+                <div class="platform-icon">📘</div>
+                <div class="platform-name">فيسبوك</div>
+                <div class="platform-desc">
+                    إدارة البث المباشر إلى صفحات فيسبوك<br>
+                    دعم بثوث متعددة في نفس الوقت
+                </div>
+                <div class="platform-btn facebook-btn">
+                    الذهاب إلى لوحة فيسبوك →
+                </div>
+            </a>
+
+            <a href="/telegram" class="platform-card telegram-card">
+                <div class="platform-icon">📱</div>
+                <div class="platform-name">تليجرام</div>
+                <div class="platform-desc">
+                    إدارة البث المباشر إلى قنوات تليجرام<br>
+                    استخدام RTMP من @VividBot
+                </div>
+                <div class="platform-btn telegram-btn">
+                    الذهاب إلى لوحة تليجرام →
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+                  </html>
